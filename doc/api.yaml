@@ -62,12 +62,12 @@ security:
   - bearerAuth: []
 
 paths:
-  /users:
+  /words:
     get:
       tags:
-        - Users
-      summary: Get all users
-      description: Gets all users (remove password from response)
+        - Words
+      summary: Get all words
+      description: Gets all words
       responses:
         200:
           description: Successful operation

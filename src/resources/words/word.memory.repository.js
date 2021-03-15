@@ -1,6 +1,8 @@
+const book = require('./book1');
+
 const getAll = async () => {
   // TODO: mock implementation. should be replaced during task development
-  return [];
+  return book;
 };
 
 module.exports = { getAll };
