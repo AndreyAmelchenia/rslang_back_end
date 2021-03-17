@@ -1,8 +1,8 @@
-const book = require('./book1');
+// const book = require('./book1');
+const Word = require('./word.model');
 
-const getAll = async () => {
-  // TODO: mock implementation. should be replaced during task development
-  return book;
-};
+const getAll = async () => Word.find({});
 
-module.exports = { getAll };
+const post = async user => Word.create(user);
+
+module.exports = { getAll, post };

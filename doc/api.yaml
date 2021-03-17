@@ -13,10 +13,28 @@ components:
       type: object
       properties:
         id:
+          type: number
+        word:
           type: string
-        name:
+        image:
           type: string
-        login:
+        audio:
+          type: string
+        audioMeaning:
+          type: string
+        audioExample:
+          type: string
+        textMeaning:
+          type: string
+        textExample:
+          type: string
+        transcription:
+          type: string
+        wordTranslate:
+          type: string
+        textMeaningTranslate:
+          type: string
+        textExampleTranslate:
           type: string
     Board:
       properties:
@@ -81,9 +99,9 @@ paths:
           $ref: '#/components/responses/UnauthorizedError'
     post:
       tags:
-        - Users
-      summary: Create user
-      description: Creates a new user (remove password from response)
+        - Words
+      summary: Create word
+      description: Creates a new word (remove password from response)
       requestBody:
         required: true
         content:
@@ -92,15 +110,30 @@ paths:
               type: object
               title: example
               properties:
-                name:
+                id:
+                  type: number
+                word:
                   type: string
-                  description: The user's name
-                login:
+                image:
                   type: string
-                  description: The user's login
-                password:
+                audio:
                   type: string
-                  description: The user's password
+                audioMeaning:
+                  type: string
+                audioExample:
+                  type: string
+                textMeaning:
+                  type: string
+                textExample:
+                  type: string
+                transcription:
+                  type: string
+                wordTranslate:
+                  type: string
+                textMeaningTranslate:
+                  type: string
+                textExampleTranslate:
+                  type: string
               required:
                 - name
       responses:
