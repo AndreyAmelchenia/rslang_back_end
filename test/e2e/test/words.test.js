@@ -1,5 +1,5 @@
 const { request: unauthorizedRequest, routes } = require('../lib');
-const debug = require('debug')('rs:test:users');
+const debug = require('debug')('rs:test:words');
 const {
   createAuthorizedRequest,
   shouldAuthorizationBeTested
@@ -29,9 +29,9 @@ describe('Users suite', () => {
   });
 
   describe('GET', () => {
-    it('should get all users', async () => {
+    it('should get all words', async () => {
       const usersResponse = await request
-        .get(routes.users.getAll)
+        .get(routes.words.getAll)
         .set('Accept', 'application/json')
         .expect(200)
         .expect('Content-Type', /json/);
@@ -41,7 +41,7 @@ describe('Users suite', () => {
       expect(Array.isArray(usersResponse.body)).to.be.true();
     });
 
-    it('should get a user by id', async () => {
+    xit('should get a user by id', async () => {
       // Setup:
       let userId;
 
@@ -73,11 +73,11 @@ describe('Users suite', () => {
   });
 
   describe('POST', () => {
-    it('should create user successfully', async () => {
+    xit('should create user successfully', async () => {
       let userId;
 
       await request
-        .post(routes.users.create)
+        .post(routes.words.create)
         .set('Accept', 'application/json')
         .send(TEST_USER_DATA)
         .expect(200)
@@ -98,7 +98,7 @@ describe('Users suite', () => {
   });
 
   describe('PUT', () => {
-    it('should update user successfully', async () => {
+    xit('should update user successfully', async () => {
       // Setup
       let userId;
 
@@ -140,7 +140,7 @@ describe('Users suite', () => {
   });
 
   describe('DELETE', () => {
-    it('should delete user successfully', async () => {
+    xit('should delete user successfully', async () => {
       // Setup:
       const userResponse = await request
         .post(routes.users.create)
@@ -152,7 +152,7 @@ describe('Users suite', () => {
       expect(deleteResponse.status).oneOf([200, 204]);
     });
 
-    it("should unassign user's tasks upon deletion", async () => {
+    xit("should unassign user's tasks upon deletion", async () => {
       // Setup:
       const userResponse = await request
         .post(routes.users.create)

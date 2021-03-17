@@ -1,22 +1,33 @@
 const uuid = require('uuid');
+const mongoose = require('mongoose');
 
-class Word {
-  constructor({
-    id = uuid(),
-    name = 'USER',
-    login = 'user',
-    password = 'P@55w0rd'
-  } = {}) {
-    this.id = id;
-    this.name = name;
-    this.login = login;
-    this.password = password;
-  }
+const wordSchema = new mongoose.Schema(
+  {
+    id: {
+      type: Number || String,
+      default: uuid
+    },
+    word: String,
+    image: String,
+    audio: String,
+    audioMeaning: String,
+    audioExample: String,
+    textMeaning: String,
+    textExample: String,
+    transcription: String,
+    wordTranslate: String,
+    textMeaningTranslate: String,
+    textExampleTranslate: String
+  },
+  { versionKey: false }
+);
 
-  static toResponse(obj) {
-    const { id, word, wordTranslate } = obj;
-    return { id, word, wordTranslate };
-  }
-}
+wordSchema.statics.toResponse = ({ id, word, wordTranslate }) => ({
+  id,
+  word,
+  wordTranslate
+});
+
+const Word = mongoose.model('Words', wordSchema);
 
 module.exports = Word;

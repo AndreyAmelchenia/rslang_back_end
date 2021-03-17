@@ -1,6 +1,6 @@
 module.exports = {
-  users: {
-    getAll: '/users',
+  words: {
+    getAll: '/words',
     getById: id => `/users/${id}`,
     create: '/users',
     update: id => `/users/${id}`,
