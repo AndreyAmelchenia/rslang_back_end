@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
-  title: Trello Service
-  description: Let's try to create a competitor for Trello!
+  title: RSLang Service
+  description: Learn English Words!
   version: 1.0.0
 
 servers:
