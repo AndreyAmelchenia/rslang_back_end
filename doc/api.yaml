@@ -9,7 +9,7 @@ servers:
 
 components:
   schemas:
-    User:
+    Word:
       type: object
       properties:
         id:
@@ -94,7 +94,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/User"
+                  $ref: "#/components/schemas/Word"
         401:
           $ref: '#/components/responses/UnauthorizedError'
     post:
@@ -142,7 +142,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/User"
+                $ref: "#/components/schemas/Word"
         400:
           description: Bad request
         401:
@@ -166,7 +166,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/User"
+                $ref: "#/components/schemas/Word"
         401:
           $ref: '#/components/responses/UnauthorizedError'
         404:
@@ -201,7 +201,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/User"
+                $ref: "#/components/schemas/Word"
         400:
           description: Bad request
         401:

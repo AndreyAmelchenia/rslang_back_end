@@ -1,4 +1,3 @@
-// const book = require('./book1');
 const Word = require('./word.model');
 
 const getAll = async () => Word.find({});
