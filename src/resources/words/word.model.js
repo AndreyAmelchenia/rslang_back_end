@@ -1,33 +1,26 @@
-const uuid = require('uuid');
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+const { addMethods } = require('../../utils/toResponse');
 
-const wordSchema = new mongoose.Schema(
+const WordsSchema = new Schema(
   {
-    id: {
-      type: Number || String,
-      default: uuid
-    },
-    word: String,
-    image: String,
-    audio: String,
-    audioMeaning: String,
-    audioExample: String,
-    textMeaning: String,
-    textExample: String,
-    transcription: String,
+    group: { type: Number, required: true },
+    page: { type: Number, required: true },
+    word: { type: String, required: true, max: 100 },
+    image: { type: String, required: false, max: 150 },
+    audio: { type: String, required: false, max: 150 },
+    audioMeaning: { type: String, required: false, max: 150 },
+    audioExample: { type: String, required: false, max: 150 },
+    textMeaning: { type: String, required: false, max: 300 },
+    textExample: { type: String, required: false, max: 300 },
+    transcription: { type: String, required: false, max: 100 },
     wordTranslate: String,
     textMeaningTranslate: String,
     textExampleTranslate: String
   },
-  { versionKey: false }
+  { collection: 'words' }
 );
 
-wordSchema.statics.toResponse = ({ id, word, wordTranslate }) => ({
-  id,
-  word,
-  wordTranslate
-});
+addMethods(WordsSchema);
 
-const Word = mongoose.model('Words', wordSchema);
-
-module.exports = Word;
+module.exports = mongoose.model('Words', WordsSchema);
