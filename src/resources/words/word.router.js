@@ -34,6 +34,11 @@ router.route('/').get(async (req, res) => {
   res.status(OK).send(words.map(word => word.toResponse()));
 });
 
+router.route('/').post(async (req, res) => {
+  const word = await wordService.postWord({ ...req.body });
+  res.json(word);
+});
+
 router.route('/count').get(async (req, res) => {
   const group = extractQueryParam(req.query.group, 0);
   const wordsPerPage = extractQueryParam(req.query.wordsPerPage, 10);

@@ -1,9 +1,15 @@
 const fs = require('fs').promises;
 const path = require('path');
+const Word = require('./word.model');
 
 const wordRepo = require('./word.db.repository');
 
 const getAll = async conditions => wordRepo.getAll(conditions);
+
+const postWord = async word => {
+  const wordNew = await new Word(word);
+  return await wordRepo.post(wordNew);
+};
 
 const getQuantity = async (group, wordsPerExampleSentenceLTE) =>
   wordRepo.getQuantity(group, wordsPerExampleSentenceLTE);
@@ -44,4 +50,4 @@ const get = async (wordId, noAssets) => {
   return word;
 };
 
-module.exports = { getAll, getQuantity, get };
+module.exports = { getAll, getQuantity, get, postWord };
