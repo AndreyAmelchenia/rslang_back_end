@@ -48467,3 +48467,80 @@
   level: 'info',
   timestamp: '2021-03-18T12:56:56.133Z'
 }
+{
+  message: 'Successfully connect to DB',
+  level: 'info',
+  timestamp: '2021-03-18T14:19:15.646Z'
+}
+{
+  message: 'App is running on http://localhost:4000',
+  level: 'info',
+  timestamp: '2021-03-18T14:19:15.664Z'
+}
+{
+  message: 'Error: secretOrPrivateKey must have a value\n' +
+    '    at Object.module.exports [as sign] (D:\\web\\rslang_back_end\\node_modules\\jsonwebtoken\\sign.js:107:20)\n' +
+    '    at Object.getTokens (D:\\web\\rslang_back_end\\src\\resources\\token\\token.service.js:28:28)\n' +
+    '    at Object.authenticate (D:\\web\\rslang_back_end\\src\\resources\\users\\user.service.js:17:37)\n' +
+    '    at async D:\\web\\rslang_back_end\\src\\resources\\authentication\\signin.router.js:7:16',
+  level: 'error',
+  timestamp: '2021-03-18T14:20:51.006Z'
+}
+{
+  message: 'POST 500 /signin - size req 49 res 12 - 160.066 ms\n',
+  level: 'info',
+  timestamp: '2021-03-18T14:20:51.008Z'
+}
+{
+  message: 'Error: secretOrPrivateKey must have a value\n' +
+    '    at Object.module.exports [as sign] (D:\\web\\rslang_back_end\\node_modules\\jsonwebtoken\\sign.js:107:20)\n' +
+    '    at Object.getTokens (D:\\web\\rslang_back_end\\src\\resources\\token\\token.service.js:28:28)\n' +
+    '    at Object.authenticate (D:\\web\\rslang_back_end\\src\\resources\\users\\user.service.js:17:37)\n' +
+    '    at async D:\\web\\rslang_back_end\\src\\resources\\authentication\\signin.router.js:7:16',
+  level: 'error',
+  timestamp: '2021-03-18T14:26:12.462Z'
+}
+{
+  message: 'POST 500 /signin - size req 49 res 12 - 116.493 ms\n',
+  level: 'info',
+  timestamp: '2021-03-18T14:26:12.464Z'
+}
+{
+  message: 'Error: secretOrPrivateKey must have a value\n' +
+    '    at Object.module.exports [as sign] (D:\\web\\rslang_back_end\\node_modules\\jsonwebtoken\\sign.js:107:20)\n' +
+    '    at Object.getTokens (D:\\web\\rslang_back_end\\src\\resources\\token\\token.service.js:28:28)\n' +
+    '    at Object.authenticate (D:\\web\\rslang_back_end\\src\\resources\\users\\user.service.js:17:37)\n' +
+    '    at async D:\\web\\rslang_back_end\\src\\resources\\authentication\\signin.router.js:7:16',
+  level: 'error',
+  timestamp: '2021-03-18T14:26:14.854Z'
+}
+{
+  message: 'POST 500 /signin - size req 49 res 12 - 129.307 ms\n',
+  level: 'info',
+  timestamp: '2021-03-18T14:26:14.856Z'
+}
+{
+  message: 'Successfully connect to DB',
+  level: 'info',
+  timestamp: '2021-03-18T14:26:30.243Z'
+}
+{
+  message: 'App is running on http://localhost:4000',
+  level: 'info',
+  timestamp: '2021-03-18T14:26:30.251Z'
+}
+{
+  message: 'Successfully connect to DB',
+  level: 'info',
+  timestamp: '2021-03-18T14:26:36.120Z'
+}
+{
+  message: 'App is running on http://localhost:4000',
+  level: 'info',
+  timestamp: '2021-03-18T14:26:36.127Z'
+}
+{
+  message: 'POST 200 /signin - size req 49 res 515 - 225.524 ms\n',
+  level: 'info',
+  timestamp: '2021-03-18T14:26:40.105Z'
+}

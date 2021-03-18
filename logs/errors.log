@@ -7705,3 +7705,30 @@
   level: 'error',
   timestamp: '2021-03-18T12:20:34.551Z'
 }
+{
+  message: 'Error: secretOrPrivateKey must have a value\n' +
+    '    at Object.module.exports [as sign] (D:\\web\\rslang_back_end\\node_modules\\jsonwebtoken\\sign.js:107:20)\n' +
+    '    at Object.getTokens (D:\\web\\rslang_back_end\\src\\resources\\token\\token.service.js:28:28)\n' +
+    '    at Object.authenticate (D:\\web\\rslang_back_end\\src\\resources\\users\\user.service.js:17:37)\n' +
+    '    at async D:\\web\\rslang_back_end\\src\\resources\\authentication\\signin.router.js:7:16',
+  level: 'error',
+  timestamp: '2021-03-18T14:20:51.005Z'
+}
+{
+  message: 'Error: secretOrPrivateKey must have a value\n' +
+    '    at Object.module.exports [as sign] (D:\\web\\rslang_back_end\\node_modules\\jsonwebtoken\\sign.js:107:20)\n' +
+    '    at Object.getTokens (D:\\web\\rslang_back_end\\src\\resources\\token\\token.service.js:28:28)\n' +
+    '    at Object.authenticate (D:\\web\\rslang_back_end\\src\\resources\\users\\user.service.js:17:37)\n' +
+    '    at async D:\\web\\rslang_back_end\\src\\resources\\authentication\\signin.router.js:7:16',
+  level: 'error',
+  timestamp: '2021-03-18T14:26:12.462Z'
+}
+{
+  message: 'Error: secretOrPrivateKey must have a value\n' +
+    '    at Object.module.exports [as sign] (D:\\web\\rslang_back_end\\node_modules\\jsonwebtoken\\sign.js:107:20)\n' +
+    '    at Object.getTokens (D:\\web\\rslang_back_end\\src\\resources\\token\\token.service.js:28:28)\n' +
+    '    at Object.authenticate (D:\\web\\rslang_back_end\\src\\resources\\users\\user.service.js:17:37)\n' +
+    '    at async D:\\web\\rslang_back_end\\src\\resources\\authentication\\signin.router.js:7:16',
+  level: 'error',
+  timestamp: '2021-03-18T14:26:14.854Z'
+}
