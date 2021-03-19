@@ -1,6 +1,6 @@
 const { OK, NO_CONTENT } = require('http-status-codes');
 const router = require('express').Router();
-
+const multer = require('multer');
 const userService = require('./user.service');
 const { id, user } = require('../../utils/validation/schemas');
 const {
@@ -8,10 +8,27 @@ const {
   userIdValidator
 } = require('../../utils/validation/validator');
 
-router.post('/', validator(user, 'body'), async (req, res) => {
-  const userEntity = await userService.save(req.body);
-  res.status(OK).send(userEntity.toResponse());
+const storageConfig = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, 'assets/photo-user');
+  },
+  filename: (req, file, cb) => {
+    cb(null, file.originalname);
+  }
 });
+
+router.post(
+  '/',
+  validator(user, 'body'),
+  multer({ storage: storageConfig }).single('filedata'),
+  async (req, res) => {
+    const userEntity = await userService.save({
+      ...req.body,
+      photo: req.file ? `photo-user/${req.file.filename}` : ''
+    });
+    res.status(OK).send(userEntity.toResponse());
+  }
+);
 
 router.get(
   '/:id',

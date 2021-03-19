@@ -30,6 +30,8 @@ app.use(helmet());
 app.use(cors());
 app.use(express.json());
 
+app.use(express.static('assets'));
+
 app.use(checkAuthentication);
 
 app.use('/doc', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
