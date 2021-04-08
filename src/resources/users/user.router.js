@@ -10,7 +10,7 @@ const {
 
 const storageConfig = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, 'assets/photo-user');
+    cb(null, '../../../assets/photo-user');
   },
   filename: (req, file, cb) => {
     cb(null, file.originalname);
